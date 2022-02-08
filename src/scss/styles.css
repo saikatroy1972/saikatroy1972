@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+/*required changes EPM*/
+.dark-mode .navbar-dark {
+  background-color: #222b45;
+}
+
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*=navbar]) {
+  background-color: #222b45 !important;
+}
+
+.nav-sidebar > .nav-item {
+  border-bottom: 1px solid #151a30;
+}
+
+[class*=sidebar-dark] .brand-link, [class*=sidebar-dark] .user-panel {
+  border-bottom: 1px solid #151a30 !important;
+}
+
+.navbar-dark .navbar-nav .user-menu-new .user-image {
+  display: inline-flex;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: -2px;
+}
+
+.navbar-dark .navbar-nav .new-user .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+.navbar-dark .navbar-nav .new-user li.user-header {
+  height: 175px;
+  padding: 10px;
+  text-align: center;
+  background: #233354;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #8a99b5 !important;
+}
+
+.navbar-dark .navbar-nav .new-user:hover {
+  background: #223454;
+}
+
+.navbar-dark .navbar-nav .new-user li.user-body {
+  padding: 15px;
+  border-bottom: 1px solid #f4f4f4;
+  border-top: 1px solid #dddddd;
+}
+
+.main-header {
+  border-bottom: none !important;
+}
+
+[class*=sidebar-dark-] {
+  background-color: #222b45 !important;
+  box-shadow: 0 0.5rem 1rem 0 #1a1f33;
+}
+
+.dark-mode, .content-wrapper {
+  background-color: #151a30 !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff !important;
+}
+
+.card, .info-box {
+  background-color: #222b45 !important;
+  border: 0.0625rem solid #101426 !important;
+  color: #fff;
+}
+
+.card-header {
+  border-bottom: 1px solid #151a30 !important;
+}
+
+.border-right {
+  border-right: 1px solid #151a30 !important;
+}
+
+.main-footer {
+  background-color: #222b45 !important;
+  border-top: 1px solid #151a30 !important;
+}/*# sourceMappingURL=styles.css.map */
