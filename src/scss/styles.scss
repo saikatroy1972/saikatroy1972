@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '_variable.scss';
+
+/*required changes EPM*/
+.dark-mode .navbar-dark {background-color: #222b45;}
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*="navbar"]){background-color:#222b45 !important;}
+.nav-sidebar > .nav-item {border-bottom: 1px solid #151a30;}
+[class*='sidebar-dark'] .brand-link,[class*='sidebar-dark'] .user-panel{border-bottom: 1px solid #151a30 !important;}
+.navbar-dark .navbar-nav .user-menu-new .user-image { display:inline-flex; width: 25px; height: 25px;border-radius: 50%; margin-right: 10px; margin-top: -2px;}
+.navbar-dark .navbar-nav .new-user .dropdown-menu {right: 0;left: auto;}
+.navbar-dark .navbar-nav .new-user li.user-header {height: 175px;padding: 10px;text-align: center;background: #233354;}
+.navbar-dark .navbar-nav .new-user li.user-header>img {z-index: 5; height: 90px;width: 90px;border: 3px solid;border-color: transparent;border-color: rgba(255,255,255,0.2);}
+.navbar-dark .navbar-nav .nav-link {color: rgba(138,153,181,1) !important;}
+.navbar-dark .navbar-nav .new-user {right: 1em;}
+.navbar-dark .navbar-nav .new-user:hover {background: #223454; box-shadow: 0 0.5rem 1rem 0 #1a1f33;}
+.navbar-dark .navbar-nav .new-user li.user-body {padding: 15px;border-bottom: 1px solid #151a30;border-top: 1px solid #151a30; background: #233354;}
+.navbar-dark .navbar-nav .new-user li.user-header>p {color: rgba(255,255,255,0.8);}
+.navbar-dark .navbar-nav .new-user li.user-footer {background-color:#22355c; padding: 10px;display: flex; justify-content: space-between;}
+.main-header {border-bottom:none !important;}
+[class*='sidebar-dark-'] {background-color: #222b45!important; box-shadow: 0 0.5rem 1rem 0 #1a1f33;}
+.dark-mode,.content-wrapper{background-color: #151a30 !important;}
+h1, h2, h3, h4, h5, h6 { color: #fff !important;}
+.card,.info-box {background-color: #222b45 !important;border: 0.0625rem solid #101426 !important; color: #fff;}
+.card-header {border-bottom: 1px solid rgba(21,26,48,1)!important;}
+.border-right {border-right: 1px solid #151a30 !important;}
+.os-padding {top:36px !important;}
+.main-footer {background-color: #222b45!important; border-top: 1px solid #151a30!important;}
