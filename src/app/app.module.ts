@@ -8,6 +8,7 @@ import { TopheadnavComponent } from './topheadnav/topheadnav.component';
 import { FootComponent } from './foot/foot.component';
 import { BodycontentComponent } from './bodycontent/bodycontent.component';
 import { PreloaderComponent } from './preloader/preloader.component';
+import { UserauthComponent } from './userauth/userauth.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PreloaderComponent } from './preloader/preloader.component';
     TopheadnavComponent,
     FootComponent,
     BodycontentComponent,
-    PreloaderComponent
+    PreloaderComponent,
+    UserauthComponent
   ],
   imports: [
     BrowserModule,
