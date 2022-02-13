@@ -3,7 +3,12 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<div class="wrapper fadeInDown">
+<div class="wrapper fadeInDown login-wrap">
+    <div class="mb-3 text-center">
+        <div class="logo"><img src="/assets/img/epm-logo-admin.png" alt="emp" title="epm" class="img-fluid imglogo mb-2"></div>
+        <h1 id="title" class="title">Login</h1>
+        <p class="sub-title text-white small text-secondary">Hello! Log in with your email.</p>
+    </div>
     <div id="formContent">
         <!-- Tabs Titles -->
 
@@ -22,10 +27,10 @@
                     <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="password" placeholder="password">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
-                <div class="form-group">
+                <div class="form-group mb-0 pb-0">
                     <input type="submit" class="fadeIn fourth" value="Log In"  (click)="validate()" >
                 </div>
-                <h3 >{{ responsetext }}</h3>
+                <h5 class="text-danger py-3" >{{ responsetext }}</h5>
             </fieldset>
         </form>
 
