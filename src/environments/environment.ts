@@ -1,9 +1,12 @@
+import { HttpHeaders } from '@angular/common/http';
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'http://115.124.120.251:5051',
+  header: new HttpHeaders().set( 'Content-Type', 'application/json').set('Authorization', "Bearer " + localStorage.getItem("token")),
 };
 
 /*
