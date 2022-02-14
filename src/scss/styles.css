@@ -37,18 +37,44 @@
   background: #233354;
 }
 
+.navbar-dark .navbar-nav .new-user li.user-header > img {
+  z-index: 5;
+  height: 90px;
+  width: 90px;
+  border: 3px solid;
+  border-color: transparent;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
 .navbar-dark .navbar-nav .nav-link {
   color: #8a99b5 !important;
 }
 
+.navbar-dark .navbar-nav .new-user {
+  right: 1em;
+}
+
 .navbar-dark .navbar-nav .new-user:hover {
   background: #223454;
+  box-shadow: 0 0.5rem 1rem 0 #1a1f33;
 }
 
 .navbar-dark .navbar-nav .new-user li.user-body {
   padding: 15px;
-  border-bottom: 1px solid #f4f4f4;
-  border-top: 1px solid #dddddd;
+  border-bottom: 1px solid #151a30;
+  border-top: 1px solid #151a30;
+  background: #233354;
+}
+
+.navbar-dark .navbar-nav .new-user li.user-header > p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-nav .new-user li.user-footer {
+  background-color: #22355c;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .main-header {
@@ -82,7 +108,20 @@ h1, h2, h3, h4, h5, h6 {
   border-right: 1px solid #151a30 !important;
 }
 
+.os-padding {
+  top: 36px !important;
+}
+
 .main-footer {
   background-color: #222b45 !important;
   border-top: 1px solid #151a30 !important;
+}
+
+/*Login Page*/
+.login-wrap {
+  background: url(../assets/img/login-bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }/*# sourceMappingURL=styles.css.map */
