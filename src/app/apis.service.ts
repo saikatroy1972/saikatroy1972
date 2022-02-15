@@ -20,4 +20,14 @@ export class ApisService {
     return this.http.get(this.baseUrl + "/api/Auth/Users", {headers});
   }
 
+  public updateProfile(profile: any){
+    let headers = environment.header;
+    return this.http.post(this.baseUrl + "/api/Auth/User/Update", profile, {headers});
+  }
+
+  public addProfile(profile: any){
+    let headers = environment.header;
+    return this.http.post(this.baseUrl + "/api/Auth/User/Add", profile, {headers});
+  }
+
 }
