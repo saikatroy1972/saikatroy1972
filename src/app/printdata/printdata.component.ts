@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApisService } from '../apis.service';
 import { User } from '../user';
+import { updateuser } from '../Updateuser';
+import { adduser } from '../adduser';
 
 @Component({
   selector: 'app-printdata',
@@ -61,6 +63,63 @@ export class PrintdataComponent implements OnInit {
 
       }
     );
+  }
+
+  update(){
+
+    var updatedUser = new updateuser(
+      "59db1034-afdc-4128-8dfa-08d987d2cb5f",
+      "asdasdasdasdas",
+      "newstring",
+      "newstring",
+      "string",
+      "6565665",
+      "6565665",
+      "6658455545",
+      "24",
+      "company@yopmail.com",
+      0,
+      "1",
+      "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      0
+    );
+
+    var data = updatedUser.toJson();
+    
+    let resp = this.service.updateProfile(data);
+    resp.subscribe();
+
+  }
+
+  add(){
+
+    var addeduser = new adduser(
+      "paul",
+      "paul@gmail.com",
+      "dib",
+      "paul",
+      "Paul@123",
+      "Ins",
+      "Kol",
+      "6565665",
+      "6565665",
+      "6658455545",
+      "24",
+      "Admin",
+      "company@yopmail.com",
+      1234,
+      "1",
+      "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+      1234
+    );
+
+    var data = addeduser.toJson();
+    
+    let resp = this.service.updateProfile(data);
+    resp.subscribe();
+    
   }
 
   ngOnInit(): void {

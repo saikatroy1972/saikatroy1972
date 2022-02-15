@@ -18,7 +18,16 @@ export class UserauthComponent implements OnInit {
   responsetext:any;
   credential: any;
   
-  constructor(private service:ApisService,private router:Router) { }
+  constructor(private service:ApisService,private router:Router) { 
+
+    var token = localStorage.getItem("token");
+    if(!(token == null || token == undefined)){
+      this.router.navigate(['./home']).then(() => {
+        window.location.reload();
+      });
+    }
+
+  }
 
   ngOnInit(): void {
   }
@@ -42,7 +51,7 @@ export class UserauthComponent implements OnInit {
         this.response = JSON.parse(JSON.stringify(data));
         this.responsetext = "";
         localStorage.setItem("token", this.response.jwtToken)
-        this.router.navigate(['./printdata']).then(() => {
+        this.router.navigate(['./home']).then(() => {
           window.location.reload();
         });
       },
@@ -55,3 +64,4 @@ export class UserauthComponent implements OnInit {
   }
 
 }
+

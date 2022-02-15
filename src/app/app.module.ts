@@ -13,6 +13,7 @@ import { PrintdataComponent } from './printdata/printdata.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
+import { AddprofileComponent } from './addprofile/addprofile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HomepageComponent } from './homepage/homepage.component';
     PreloaderComponent,
     UserauthComponent,
     PrintdataComponent,
-    HomepageComponent
+    HomepageComponent,
+    AddprofileComponent
   ],
   imports: [
     BrowserModule,
