@@ -9,6 +9,10 @@ import { FootComponent } from './foot/foot.component';
 import { BodycontentComponent } from './bodycontent/bodycontent.component';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { UserauthComponent } from './userauth/userauth.component';
+import { PrintdataComponent } from './printdata/printdata.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +22,15 @@ import { UserauthComponent } from './userauth/userauth.component';
     FootComponent,
     BodycontentComponent,
     PreloaderComponent,
-    UserauthComponent
+    UserauthComponent,
+    PrintdataComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

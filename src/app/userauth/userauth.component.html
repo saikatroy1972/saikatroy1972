@@ -1,1 +1,45 @@
-<p>userauth works!</p>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown login-wrap">
+    <div class="mb-3 text-center">
+        <div class="logo"><img src="/assets/img/epm-logo-admin.png" alt="emp" title="epm" class="img-fluid imglogo mb-2"></div>
+        <h1 id="title" class="title">Login</h1>
+        <p class="sub-title text-white small text-secondary">Hello! Log in with your email.</p>
+    </div>
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div style="height: 30px;">
+        </div>
+
+        <!-- Login Form -->
+        <form name="form">
+            <fieldset>
+                <div class="form-group">
+                    <input type="text" id="username" class="form-control fadeIn second" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" name="username" placeholder="username">
+                    <!-- <input type="text" class="form-control"  [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Enter your username"/> -->
+                </div>
+                <div class="form-group">
+                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="password" placeholder="password">
+                    <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
+                </div>
+                <div class="form-group mb-0 pb-0">
+                    <!--input type="submit" class="fadeIn fourth" value="Log In"  (click)="validate()" -->
+                    <button class="slide_from_left">Log In</button>
+                </div>
+                <h5 class="text-danger py-3" >{{ responsetext }}</h5>
+            </fieldset>
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+        </div>
+
+    </div>
+</div>
+<!-- <button class="btn btn-success"  (click)="validate()" >Submit</button> -->
