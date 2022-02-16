@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,10 +11,10 @@ import { BodycontentComponent } from './bodycontent/bodycontent.component';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { UserauthComponent } from './userauth/userauth.component';
 import { PrintdataComponent } from './printdata/printdata.component';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AddprofileComponent } from './addprofile/addprofile.component';
+import { AddProfilePageComponent } from './add-profile-page/add-profile-page.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,15 @@ import { AddprofileComponent } from './addprofile/addprofile.component';
     UserauthComponent,
     PrintdataComponent,
     HomepageComponent,
-    AddprofileComponent
+    AddprofileComponent,
+    AddProfilePageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

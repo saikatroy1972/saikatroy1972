@@ -14,9 +14,8 @@ export class LeftnavComponent implements OnInit {
   }
 
   route(){
-    this.router.navigate(['./add']).then(() => {
-          window.location.reload();
-        });
+    //console.log("print");
+    this.router.navigate(['./add']);
 
   }
 

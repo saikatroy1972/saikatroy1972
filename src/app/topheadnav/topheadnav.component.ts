@@ -14,6 +14,13 @@ export class TopheadnavComponent implements OnInit {
   userID: any;
   uData: any;
   constructor(private router: Router) {
+    
+
+
+  }
+
+  ngOnInit(): void {
+
     try {
       this.userData = localStorage.getItem("userData");
   //    console.log(this.userData)
@@ -24,13 +31,10 @@ export class TopheadnavComponent implements OnInit {
     } catch (error) {
       console.log(error)
     }
-
-
-  }
-
-  ngOnInit(): void {
+    
   }
   logout() {
+
     localStorage.removeItem("token");
     localStorage.removeItem("userData");
     this.router.navigate(['./userauth']);
