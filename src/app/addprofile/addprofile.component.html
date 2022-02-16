@@ -17,82 +17,82 @@
         </div>
 
         <!-- Login Form -->
-        <form name="form">
+        <form name="form" [formGroup]="form">
             <fieldset>
                 <div class="form-group">
-                    <input type="text" id="username" class="form-control fadeIn second" [(ngModel)]="userName" [ngModelOptions]="{standalone: true}" name="username" placeholder="username">
+                    <input type="text" id="username" class="form-control fadeIn second" formControlName="userName"  name="username" placeholder="username">
                     <!-- <input type="text" class="form-control"  [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Enter your username"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" name="email" placeholder="email">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="email"  name="email" placeholder="email">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="firstName" [ngModelOptions]="{standalone: true}" name="firstName" placeholder="firstName">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="firstName"  name="firstName" placeholder="firstName">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="surName" [ngModelOptions]="{standalone: true}" name="surName" placeholder="surName">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="surName"  name="surName" placeholder="surName">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" name="password" placeholder="password">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="password"  name="password" placeholder="password">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="organizationName" [ngModelOptions]="{standalone: true}" name="organizationName" placeholder="organizationName">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="organizationName"  name="organizationName" placeholder="organizationName">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="organizationAddress" [ngModelOptions]="{standalone: true}" name="organizationAddress" placeholder="organizationAddress">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="organizationAddress"  name="organizationAddress" placeholder="organizationAddress">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="text" id="username" class="form-control fadeIn second" [(ngModel)]="gstNumber" [ngModelOptions]="{standalone: true}" name="gstNumber" placeholder="gstNumber">
+                    <input type="text" id="username" class="form-control fadeIn second" formControlName="gstNumber"  name="gstNumber" placeholder="gstNumber">
                     <!-- <input type="text" class="form-control"  [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Enter your username"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="panNumber" [ngModelOptions]="{standalone: true}" name="panNumber" placeholder="panNumber">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="panNumber"  name="panNumber" placeholder="panNumber">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="phoneNumber" [ngModelOptions]="{standalone: true}" name="phoneNumber" placeholder="phoneNumber">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="phoneNumber"  name="phoneNumber" placeholder="phoneNumber">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="state" [ngModelOptions]="{standalone: true}" name="state" placeholder="state">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="state"  name="state" placeholder="state">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="roleName" [ngModelOptions]="{standalone: true}" name="roleName" placeholder="roleName">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="roleName"  name="roleName" placeholder="roleName">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="companyEmail" [ngModelOptions]="{standalone: true}" name="companyEmail" placeholder="companyEmail">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="companyEmail"  name="companyEmail" placeholder="companyEmail">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="pin" [ngModelOptions]="{standalone: true}" name="pin" placeholder="pin">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="pin"  name="pin" placeholder="pin">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="country" [ngModelOptions]="{standalone: true}" name="country" placeholder="country">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="country"  name="country" placeholder="country">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="poolingStationId" [ngModelOptions]="{standalone: true}" name="poolingStationId" placeholder="poolingStationId">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="poolingStationId" name="poolingStationId" placeholder="poolingStationId">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="areaId" [ngModelOptions]="{standalone: true}" name="areaId" placeholder="areaId">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="areaId"  name="areaId" placeholder="areaId">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" [(ngModel)]="orginazationStateId" [ngModelOptions]="{standalone: true}" name="orginazationStateId" placeholder="orginazationStateId">
+                    <input type="password" id="password" class="form-control fadeIn third" formControlName="orginazationStateId"  name="orginazationStateId" placeholder="orginazationStateId">
                     <!-- <input type="password" class="form-control"  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Enter your password"/> -->
                 </div>
                 <div class="form-group mb-0 pb-0">
-                    <input type="submit" class="fadeIn fourth" value="Add"  (click)="add()" >
+                    <input type="submit" class="fadeIn fourth" [disabled]="!form.valid" value="Add"  (click)="add()" >
                 </div>
             </fieldset>
         </form>
