@@ -15,6 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomepageComponent } from './homepage/homepage.component';
 import { AddprofileComponent } from './addprofile/addprofile.component';
 import { AddProfilePageComponent } from './add-profile-page/add-profile-page.component';
+import { HandsonComponent } from './handson/handson.component';
+import { HotTableModule } from '@handsontable/angular';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { AddProfilePageComponent } from './add-profile-page/add-profile-page.com
     PrintdataComponent,
     HomepageComponent,
     AddprofileComponent,
-    AddProfilePageComponent
+    AddProfilePageComponent,
+    HandsonComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,6 +39,7 @@ import { AddProfilePageComponent } from './add-profile-page/add-profile-page.com
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    HotTableModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

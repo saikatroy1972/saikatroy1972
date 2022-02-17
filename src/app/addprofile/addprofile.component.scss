@@ -109,7 +109,7 @@ html {
     transform: scale(0.95);
   }
   
-  input[type=text], input[type=password] {
+  input[type=text], input[type=password], input[type=number], select {
     background-color: #192038 ;
     color: #fff;
     border-color: #101426 ; text-align: left ; 
@@ -127,12 +127,12 @@ html {
     
   }
   
-  input[type=text]:focus,input[type=password]:focus {
+  input[type=text]:focus, input[type=password]:focus, input[type=number]:focus {
     background-color: #151a30 ;
     border-color: #101426 ;
   }
   
-  input[type=text]:placeholder,input[type=password]:placeholder {
+  input[type=text]:placeholder, input[type=password]:placeholder, input[type=number]:placeholder {
     color: #929292;
   }
   
@@ -253,4 +253,8 @@ html {
   
   #icon {
     width:60%;
+  }
+
+  .invalid-feedback{
+    color: red;
   }
