@@ -26,9 +26,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="number" id="email" class="form-control fadeIn third" formControlName="email"  name="email" placeholder="email">
+                    <input type="text" id="email" class="form-control fadeIn third" formControlName="email"  name="email" placeholder="email">
                     <div *ngIf="form.get('email')!.touched && form.get('email')!.invalid">
-                        <p>email is required</p>
+                        <p>A valid mail address is required</p>
                     </div>
                 </div>
                 <div class="form-group">
@@ -43,15 +43,6 @@
                         <p>surName is required</p>
                     </div>
                 </div>
-
-                <!-- <div class="form-group">
-                    <select id="cars" name="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="fiat">Fiat</option>
-                        <option value="audi">Audi</option>
-                    </select>
-                </div> -->
                 
                 <div class="form-group">
                     <input type="password" id="password" class="form-control fadeIn third" formControlName="password"  name="password" placeholder="password">
@@ -86,21 +77,32 @@
                 <div class="form-group">
                     <input type="number" id="phoneNumber" class="form-control fadeIn third" formControlName="phoneNumber"  name="phoneNumber" placeholder="phoneNumber">
                     <div *ngIf="form.get('phoneNumber')!.touched && form.get('phoneNumber')!.invalid">
-                        <p>phoneNumber is required</p>
+                        <p>A 10 digit phoneNumber is required</p>
                     </div>
                 </div>
                 <div class="form-group">
+                    <select id="state" name="state" formControlName="state">
+                        <option *ngFor="let state of state_details" value="{{state.stateId}}">{{state.stateName}}</option>
+                    </select>
+                </div>
+                <!-- <div class="form-group">
                     <input type="password" id="state" class="form-control fadeIn third" formControlName="state"  name="state" placeholder="state">
                     <div *ngIf="form.get('state')!.touched && form.get('state')!.invalid">
                         <p>state is required</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group">
+                    <select id="roleName" name="roleName" formControlName="roleName">
+                        <option value="Admin">Admin</option>
+                        <option value="Subscriber">Subscriber</option>
+                    </select>
+                </div>
+                <!-- <div class="form-group">
                     <input type="text" id="roleName" class="form-control fadeIn third" formControlName="roleName"  name="roleName" placeholder="roleName">
                     <div *ngIf="form.get('roleName')!.touched && form.get('roleName')!.invalid">
                         <p>roleName is required</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <input type="text" id="companyEmail" class="form-control fadeIn third" formControlName="companyEmail"  name="companyEmail" placeholder="companyEmail">
                     <div *ngIf="form.get('companyEmail')!.touched && form.get('companyEmail')!.invalid">
@@ -108,17 +110,22 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="password" id="pin" class="form-control fadeIn third" formControlName="pin"  name="pin" placeholder="pin">
+                    <input type="number" id="pin" class="form-control fadeIn third" formControlName="pin"  name="pin" placeholder="pin">
                     <div *ngIf="form.get('pin')!.touched && form.get('pin')!.invalid">
-                        <p>pin is required</p>
+                        <p>A 6 digit pin is required</p>
                     </div>
                 </div>
                 <div class="form-group">
+                    <select id="country" name="country" formControlName="country">
+                        <option value="1">India</option>
+                    </select>
+                </div>
+                <!-- <div class="form-group">
                     <input type="password" id="country" class="form-control fadeIn third" formControlName="country"  name="country" placeholder="country">
                     <div *ngIf="form.get('country')!.touched && form.get('country')!.invalid">
                         <p>country is required</p>
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group">
                     <input type="text" id="poolingStationId" class="form-control fadeIn third" formControlName="poolingStationId" name="poolingStationId" placeholder="poolingStationId">
                     <div *ngIf="form.get('poolingStationId')!.touched && form.get('poolingStationId')!.invalid">
@@ -138,7 +145,7 @@
                     </div>
                 </div>
                 <div class="form-group mb-0 pb-0">
-                    <input type="submit" class="fadeIn fourth" [disabled]="!form.valid" value="Add"  >
+                    <input type="submit" class="fadeIn fourth" value="Add" [disabled]="!form.valid" (click)="prints()">
                 </div>
             </fieldset>
         </form>
