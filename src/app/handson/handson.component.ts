@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import Handsontable from 'handsontable';
+import { CustomEditor } from '../CustomEditor';
+
 
 @Component({
   selector: 'app-handson',
@@ -8,17 +11,55 @@ import { Component, OnInit } from '@angular/core';
 export class HandsonComponent implements OnInit {
 
   dataset: any[] = [
-    {id: 1, name: 'Ted Right', address: 'Wall Street'},
-    {id: 2, name: 'Frank Honest', address: 'Pennsylvania Avenue'},
-    {id: 3, name: 'Joan Well', address: 'Broadway'},
-    {id: 4, name: 'Gail Polite', address: 'Bourbon Street'},
-    {id: 5, name: 'Michael Fair', address: 'Lombard Street'},
-    {id: 6, name: 'Mia Fair', address: 'Rodeo Drive'},
-    {id: 7, name: 'Cora Fair', address: 'Sunset Boulevard'},
-    {id: 8, name: 'Jack Right', address: 'Michigan Avenue'},
+    {id: 1, name: 'Maruti', price: 10},
+    {id: 2, name: 'Alto', price: 20},
+    {id: 3, name: 'Hyundai', price: 30},
+    {id: 4, name: 'Ford', price: 40},
+    {id: 5, name: 'Ferrari', price: 50},
+    {id: 6, name: 'BMW', price: 60},
   ];
 
-  constructor() { }
+  //reg = /^\d+$/;
+
+  // number: any = [{
+  //   type: 'custom',
+  //   renderer: Handsontable.renderers.NumericRenderer,
+  //   editor: Handsontable.editors.TextEditor,
+  //   validator: Handsontable.validators.NumericValidator
+  // }]
+
+  // hotSettings: Handsontable.GridSettings = {
+  //   startRows: 5,
+  //   columns: [
+  //     {
+  //       editor: CustomEditor
+  //     }
+  //   ],
+  //   colHeaders: true,
+  //   colWidths: 200,
+  //   licenseKey: 'non-commercial-and-evaluation'
+  // };
+
+  constructor() { 
+    Handsontable.cellTypes.registerCellType('numeric', {
+      renderer: Handsontable.renderers.NumericRenderer,
+      editor: Handsontable.editors.NumericEditor,
+      validator: Handsontable.validators.NumericValidator,
+      // beforeKeyDown : function(e) {
+      //   var reg = /^\d+$/;
+      //   if (!reg.test(e.key)) {
+      //     e.preventDefault()
+      //   }
+      // }
+    });
+  }
+
+  // beforeKeyDown(e: any) {
+  //   var reg = /^\d+$/;
+  //   if (!reg.test(e.key)) {
+  //     e.preventDefault()
+  //   }
+  // }
 
   ngOnInit(): void {
   }
