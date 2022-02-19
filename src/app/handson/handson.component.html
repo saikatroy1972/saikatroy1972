@@ -10,9 +10,11 @@
       class="hot"
       [data]="dataset"
       [colHeaders]="true"
+      [minSpareRows]=1
       [rowHeaders]="true">
-        <hot-column data="id" [readOnly]="true" title="ID"></hot-column>
-        <hot-column data="name" title="Full name"></hot-column>
-        <hot-column data="address" title="Street name"></hot-column>
+        <hot-column data="id" [readOnly]="true" title="ID" ></hot-column>
+        <hot-column data="name" title="Car name" ></hot-column>
+        <hot-column data="price" title="Price" type="numeric" ></hot-column>
     </hot-table>
-  </div>
+</div>
+
