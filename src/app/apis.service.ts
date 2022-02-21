@@ -35,4 +35,19 @@ export class ApisService {
     return this.http.post(this.baseUrl + "/api/Auth/User/Add", profile, {headers});
   }
 
+  public getCountry(){
+    let headers = new HttpHeaders().set( 'Content-Type', 'application/json')
+    return this.http.get(this.baseUrl + "/api/Country/GetCountryDetails", {headers});
+  }
+
+  public addCountry(country: any){
+    let headers = new HttpHeaders().set( 'Content-Type', 'application/json')
+    return this.http.post(this.baseUrl + "/api/Country/SaveCountryDetails", country, {headers});
+  }
+
+  public updateCountry(country: any){
+    let headers = new HttpHeaders().set( 'Content-Type', 'application/json')
+    return this.http.post(this.baseUrl + "/api/Country/UpdateCountry", country, {headers});
+  }
+
 }

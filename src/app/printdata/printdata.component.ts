@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApisService } from '../apis.service';
 import { User } from '../user';
-import { updateuser } from '../Updateuser';
+import { updateuser } from '../updateuser';
 import { adduser } from '../adduser';
 
 @Component({

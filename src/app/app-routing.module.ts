@@ -7,6 +7,7 @@ import { UserauthComponent } from './userauth/userauth.component';
 import { AddProfilePageComponent } from './add-profile-page/add-profile-page.component';
 import { HandsonComponent } from './handson/handson.component';
 import { AddprofileComponent } from './addprofile/addprofile.component';
+import { CountryComponent } from './country/country.component';
 
 const routes: Routes = [
   { path:"",redirectTo:"home",pathMatch:"full" },
@@ -16,7 +17,7 @@ const routes: Routes = [
   { path: 'add', component: AddprofileComponent },
   // { path: 'add', component: AddProfilePageComponent },
   { path: 'handson', component: HandsonComponent },
-  
+  { path: 'country', component: CountryComponent },
 ];
 
 @NgModule({

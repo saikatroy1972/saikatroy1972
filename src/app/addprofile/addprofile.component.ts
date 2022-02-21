@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApisService } from '../apis.service';
+import { PasswordValidator } from '../PasswordValidator';
 
 @Component({
   selector: 'app-addprofile',
@@ -42,7 +43,7 @@ export class AddprofileComponent implements OnInit {
     email: new FormControl('', [Validators.required, Validators.pattern(this.EMAIL)]),
     firstName: new FormControl('', Validators.required),
     surName: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
+    password: new FormControl('', [Validators.required, PasswordValidator.strong, Validators.minLength(8), Validators.maxLength(12)]),
     organizationName: new FormControl('', Validators.required),
     organizationAddress: new FormControl('', Validators.required),
     gstNumber: new FormControl('', Validators.required),
