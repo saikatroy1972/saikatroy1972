@@ -1,159 +1,231 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
+<div class="content-wrapper">
 
-<div class="wrapper fadeInDown login-wrap">
-    <div class="mb-3 text-center">
-        <div class="logo"><img src="/assets/img/epm-logo-admin.png" alt="emp" title="epm" class="img-fluid imglogo mb-2"></div>
-        <h1 id="title" class="title">Login</h1>
-        <p class="sub-title text-white small text-secondary">Hello! Log in with your email.</p>
+  <div class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1 class="m-0">Add Profile</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a routerLink="">Home</a></li>
+            <li class="breadcrumb-item active">Profile</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper ">
+    <div id="exTab">
+      <ul class="tab ">
+        <li id="profile" [class.active]="panelId === 'profile'" (click)="tabChange('profile')"> Personal </li>
+        <li id="login" [class.active]="panelId === 'login'" (click)="tabChange('login')"> Login </li>
+        <li id="organisation" [class.active]="panelId === 'organisation'" (click)="tabChange('organisation')">
+          Office </li>
+        <li id="misc" [class.active]="panelId === 'misc'" (click)="tabChange('misc')"> Misc </li>
+      </ul>
+
+      <div class="content">
+        <form name="form" [formGroup]="form">
+          <div class="content-value" [class.hide]="panelId !== 'profile'">
+            <!-- <h6>Content's background color is the same for the tab</h6> -->
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="firstName">First Name </label>
+                <input type="text" id="firstName" class="form-control fadeIn third" formControlName="firstName"
+                  name="firstName" placeholder="firstName">
+                <div *ngIf="form.get('firstName')!.touched && form.get('firstName')!.invalid">
+                  <p>firstName is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="surName">Last Name </label>
+                <input type="text" id="surName" class="form-control fadeIn third" formControlName="surName"
+                  name="surName" placeholder="surName">
+                <div *ngIf="form.get('surName')!.touched && form.get('surName')!.invalid">
+                  <p>surName is required</p>
+                </div>
+              </div>
+              <div class="form-group  col-md-4">
+                <label for="email">Email </label>
+                <input type="text" id="email" class="form-control fadeIn third" formControlName="email" name="email"
+                  placeholder="email">
+                <div *ngIf="form.get('email')!.touched && form.get('email')!.invalid">
+                  <p>A valid mail address is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="phoneNumber">Contact No </label>
+                <input type="number" id="phoneNumber" class="form-control fadeIn third" formControlName="phoneNumber"
+                  name="phoneNumber" placeholder="phoneNumber">
+                <div *ngIf="form.get('phoneNumber')!.touched && form.get('phoneNumber')!.invalid">
+                  <p>A 10 digit phoneNumber is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="pin">Pin </label>
+                <input type="number" id="pin" class="form-control fadeIn third" formControlName="pin" name="pin"
+                  placeholder="pin">
+                <div *ngIf="form.get('pin')!.touched && form.get('pin')!.invalid">
+                  <p>A 6 digit pin is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="state">State </label>
+                <select id="state" name="state" class="form-control fadeIn third" formControlName="state">
+                  <option *ngFor="let state of state_details" value="{{state.stateId}}">{{state.stateName}}</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="country">Country</label>
+                <select id="country" name="country" class="form-control fadeIn third" formControlName="country">
+                  <option value="1">India</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-0 pb-0">
+                <input type="submit" class="fadeIn fourth" value="Next" (click)="tabChange('login')">
+              </div>
+            </div>
+
+
+          </div>
+          <div class="content-value" [class.hide]="panelId !== 'login'">
+            <!-- <h6>We use the class nav-pills instead of nav-tabs which automatically creates a background color for the tab</h6> -->
+
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="username">User Name </label>
+                <input type="text" id="username" class="form-control fadeIn second" formControlName="userName"
+                  name="username" placeholder="username">
+                <div *ngIf="form.get('userName')!.touched && form.get('userName')!.invalid">
+                  <p>Username is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="password">Password </label>
+                <input type="text" id="password" class="form-control fadeIn third" formControlName="password"
+                  name="password" placeholder="password" value="Password@123">
+                <div *ngIf="form.get('password')!.touched && form.get('password')!.invalid">
+                  <p>Valid password is required</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-0 pb-0">
+                <input type="submit" class="fadeIn fourth" value="Next" (click)="tabChange('organisation')">
+              </div>
+            </div>
+          </div>
+          <div class="content-value" [class.hide]="panelId !== 'organisation'">
+            <!-- <h3>We applied clearfix to the tab-content to rid of the gap between the tab and the content</h3> -->
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="organizationName">Organization</label>
+                <input type="text" id="organizationName" class="form-control fadeIn third"
+                  formControlName="organizationName" name="organizationName" placeholder="Organization Name">
+                <div *ngIf="form.get('organizationName')!.touched && form.get('organizationName')!.invalid">
+                  <p>organizationName is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="organizationAddress">Address</label>
+                <input type="text" id="organizationAddress" class="form-control fadeIn third"
+                  formControlName="organizationAddress" name="organizationAddress" placeholder="organizationAddress">
+                <div *ngIf="form.get('organizationAddress')!.touched && form.get('organizationAddress')!.invalid">
+                  <p>organizationAddress is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="orginazationStateId">State</label>
+                <input type="text" id="orginazationStateId" class="form-control fadeIn third"
+                  formControlName="orginazationStateId" name="orginazationStateId" placeholder="orginazationStateId">
+                <div *ngIf="form.get('orginazationStateId')!.touched && form.get('orginazationStateId')!.invalid">
+                  <p>orginazationStateId is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="gstNumber">GSTIN</label>
+                <input type="text" id="gstNumber" class="form-control fadeIn second" formControlName="gstNumber"
+                  name="gstNumber" placeholder="gstNumber">
+                <div *ngIf="form.get('gstNumber')!.touched && form.get('gstNumber')!.invalid">
+                  <p>gstNumber is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="panNumber">PAN</label>
+                <input type="text" id="panNumber" class="form-control fadeIn third" formControlName="panNumber"
+                  name="panNumber" placeholder="panNumber">
+                <div *ngIf="form.get('panNumber')!.touched && form.get('panNumber')!.invalid">
+                  <p>panNumber is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="companyEmail">Email</label>
+                <input type="text" id="companyEmail" class="form-control fadeIn third" formControlName="companyEmail"
+                  name="companyEmail" placeholder="companyEmail">
+                <div *ngIf="form.get('companyEmail')!.touched && form.get('companyEmail')!.invalid">
+                  <p>companyEmail is required</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-0 pb-0">
+                <input type="submit" class="fadeIn fourth" value="Next" (click)="tabChange('misc')">
+              </div>
+            </div>
+          </div>
+          <div class="content-value" [class.hide]="panelId !== 'misc'">
+            <div class="row">
+              <div class="form-group col-md-4">
+                <label for="roleName">Role</label>
+                <select id="roleName" name="roleName" formControlName="roleName">
+                  <option value="Admin">Admin</option>
+                  <option value="Subscriber">Subscriber</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="poolingStationId">pooling Station </label>
+                <input type="text" id="poolingStationId" class="form-control fadeIn third"
+                  formControlName="poolingStationId" name="poolingStationId" placeholder="poolingStationId">
+                <div *ngIf="form.get('poolingStationId')!.touched && form.get('poolingStationId')!.invalid">
+                  <p>poolingStationId is required</p>
+                </div>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="areaId">Area </label>
+                <input type="text" id="areaId" class="form-control fadeIn third" formControlName="areaId" name="areaId"
+                  placeholder="areaId">
+                <div *ngIf="form.get('areaId')!.touched && form.get('areaId')!.invalid">
+                  <p>areaId is required</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group mb-0 pb-0">
+                <input type="submit" class="fadeIn fourth" value="Add" [disabled]="!form.valid" (click)="prints()">
+              </div>
+            </div>
+            <!-- <h3>We use css to change the background color of the content to be equal to the tab</h3> -->
+
+          </div>
+        </form>
+      </div>
     </div>
     <div id="formContent">
-        <!-- Tabs Titles -->
 
-        <!-- Icon -->
-        <div style="height: 30px;">
-        </div>
 
-        <!-- Login Form -->
-        <form name="form" [formGroup]="form">
-            <fieldset>
-                <div class="form-group">
-                    <input type="text" id="username" class="form-control fadeIn second" formControlName="userName"  name="username" placeholder="username">
-                    <div *ngIf="form.get('userName')!.touched && form.get('userName')!.invalid">
-                        <p>Username is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="email" class="form-control fadeIn third" formControlName="email"  name="email" placeholder="email">
-                    <div *ngIf="form.get('email')!.touched && form.get('email')!.invalid">
-                        <p>A valid mail address is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="firstName" class="form-control fadeIn third" formControlName="firstName"  name="firstName" placeholder="firstName">
-                    <div *ngIf="form.get('firstName')!.touched && form.get('firstName')!.invalid">
-                        <p>firstName is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="surName" class="form-control fadeIn third" formControlName="surName"  name="surName" placeholder="surName">
-                    <div *ngIf="form.get('surName')!.touched && form.get('surName')!.invalid">
-                        <p>surName is required</p>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <input type="password" id="password" class="form-control fadeIn third" formControlName="password"  name="password" placeholder="password">
-                    <div *ngIf="form.get('password')!.touched && form.get('password')!.invalid">
-                        <p>Valid password is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="organizationName" class="form-control fadeIn third" formControlName="organizationName"  name="organizationName" placeholder="organizationName">
-                    <div *ngIf="form.get('organizationName')!.touched && form.get('organizationName')!.invalid">
-                        <p>organizationName is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="organizationAddress" class="form-control fadeIn third" formControlName="organizationAddress"  name="organizationAddress" placeholder="organizationAddress">
-                    <div *ngIf="form.get('organizationAddress')!.touched && form.get('organizationAddress')!.invalid">
-                        <p>organizationAddress is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="gstNumber" class="form-control fadeIn second" formControlName="gstNumber"  name="gstNumber" placeholder="gstNumber">
-                    <div *ngIf="form.get('gstNumber')!.touched && form.get('gstNumber')!.invalid">
-                        <p>gstNumber is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="panNumber" class="form-control fadeIn third" formControlName="panNumber"  name="panNumber" placeholder="panNumber">
-                    <div *ngIf="form.get('panNumber')!.touched && form.get('panNumber')!.invalid">
-                        <p>panNumber is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="number" id="phoneNumber" class="form-control fadeIn third" formControlName="phoneNumber"  name="phoneNumber" placeholder="phoneNumber">
-                    <div *ngIf="form.get('phoneNumber')!.touched && form.get('phoneNumber')!.invalid">
-                        <p>A 10 digit phoneNumber is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <select id="state" name="state" formControlName="state">
-                        <option *ngFor="let state of state_details" value="{{state.stateId}}">{{state.stateName}}</option>
-                    </select>
-                </div>
-                <!-- <div class="form-group">
-                    <input type="password" id="state" class="form-control fadeIn third" formControlName="state"  name="state" placeholder="state">
-                    <div *ngIf="form.get('state')!.touched && form.get('state')!.invalid">
-                        <p>state is required</p>
-                    </div>
-                </div> -->
-                <div class="form-group">
-                    <select id="roleName" name="roleName" formControlName="roleName">
-                        <option value="Admin">Admin</option>
-                        <option value="Subscriber">Subscriber</option>
-                    </select>
-                </div>
-                <!-- <div class="form-group">
-                    <input type="text" id="roleName" class="form-control fadeIn third" formControlName="roleName"  name="roleName" placeholder="roleName">
-                    <div *ngIf="form.get('roleName')!.touched && form.get('roleName')!.invalid">
-                        <p>roleName is required</p>
-                    </div>
-                </div> -->
-                <div class="form-group">
-                    <input type="text" id="companyEmail" class="form-control fadeIn third" formControlName="companyEmail"  name="companyEmail" placeholder="companyEmail">
-                    <div *ngIf="form.get('companyEmail')!.touched && form.get('companyEmail')!.invalid">
-                        <p>companyEmail is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="number" id="pin" class="form-control fadeIn third" formControlName="pin"  name="pin" placeholder="pin">
-                    <div *ngIf="form.get('pin')!.touched && form.get('pin')!.invalid">
-                        <p>A 6 digit pin is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <select id="country" name="country" formControlName="country">
-                        <option value="1">India</option>
-                    </select>
-                </div>
-                <!-- <div class="form-group">
-                    <input type="password" id="country" class="form-control fadeIn third" formControlName="country"  name="country" placeholder="country">
-                    <div *ngIf="form.get('country')!.touched && form.get('country')!.invalid">
-                        <p>country is required</p>
-                    </div>
-                </div> -->
-                <div class="form-group">
-                    <input type="text" id="poolingStationId" class="form-control fadeIn third" formControlName="poolingStationId" name="poolingStationId" placeholder="poolingStationId">
-                    <div *ngIf="form.get('poolingStationId')!.touched && form.get('poolingStationId')!.invalid">
-                        <p>poolingStationId is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="areaId" class="form-control fadeIn third" formControlName="areaId"  name="areaId" placeholder="areaId">
-                    <div *ngIf="form.get('areaId')!.touched && form.get('areaId')!.invalid">
-                        <p>areaId is required</p>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <input type="text" id="orginazationStateId" class="form-control fadeIn third" formControlName="orginazationStateId"  name="orginazationStateId" placeholder="orginazationStateId">
-                    <div *ngIf="form.get('orginazationStateId')!.touched && form.get('orginazationStateId')!.invalid">
-                        <p>orginazationStateId is required</p>
-                    </div>
-                </div>
-                <div class="form-group mb-0 pb-0">
-                    <input type="submit" class="fadeIn fourth" value="Add" [disabled]="!form.valid" (click)="prints()">
-                </div>
-            </fieldset>
-        </form>
+      <!-- Tabs Titles -->
 
-        <!-- Remind Passowrd -->
-        <div id="formFooter">
-        <a class="underlineHover" href="#">Forgot Password?</a>
-        </div>
+      <!-- Icon -->
+      <div style="height: 30px;">
+      </div>
+      <!-- Login Form -->
+
+
 
     </div>
+  </div>
 </div>

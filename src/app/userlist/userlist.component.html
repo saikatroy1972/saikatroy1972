@@ -1,0 +1,19 @@
+<div style="margin:0 30px;">
+    <h2 style="text-align: center;">Regular HTML Table</h2>
+    <table>
+        <tr>
+            <th>SL No.</th>
+            <th>Username</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email id</th>
+        </tr>
+        <tr *ngFor="let user of userList; index as i">
+            <td>{{ i }}</td>
+            <td>{{ user.userName }}</td>
+            <td>{{ user.firstName }}</td>
+            <td>{{ user.surName }}</td>
+            <td>{{ user.email }}</td>
+        </tr>
+    </table>
+</div>

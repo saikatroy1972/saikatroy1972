@@ -19,12 +19,17 @@ export class ApisService {
     let headers = environment.header;
     return this.http.get(this.baseUrl + "/api/Auth/Users", {headers});
   }
+
   public getUserData(credential:any ){
-
-     let headers = environment.header;
-
+    let headers = environment.header;
     return this.http.get(this.baseUrl + "/api/Auth/User/"+credential, {headers});
   }
+
+  public getUserList(){
+    let headers = environment.header;
+    return this.http.get(this.baseUrl + "/api/Auth/Users", {headers});
+  }
+
   public updateProfile(profile: any){
     let headers = environment.header;
     return this.http.post(this.baseUrl + "/api/Auth/User/Update", profile, {headers});
