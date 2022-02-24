@@ -57,21 +57,11 @@ export class AddprofileComponent implements OnInit {
     poolingStationId: new FormControl('', Validators.required),
     areaId: new FormControl('', Validators.required),
     orginazationStateId: new FormControl('', Validators.required),
-
-    // name: new FormControl('', Validators.required),
-    // mail: new FormControl('', [Validators.required, Validators.pattern(this.EMAIL)]),
-    // username: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    // password: new FormControl('', [Validators.required, Validators.minLength(4)])
   });
 
 
   constructor(private service: ApisService, private router: Router) {
-    // var token = localStorage.getItem("token");
-    // if(!(token == null || token == undefined)){
-    //   this.router.navigate(['./home']).then(() => {
-    //     window.location.reload();
-    //   });
-    // }
+    
   }
 
   tabs = [
@@ -83,21 +73,15 @@ export class AddprofileComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   panelId:any = "profile"
+
   tabChange(ids: any) {
-   // this.id == ids
-   this.panelId=ids
-    console.log(ids)
+    this.panelId=ids
   }
+
   add() {
 
-  }
-
-  prints() {
-    console.log(this.form.value)
-    console.log(this.form.value.state);
-    console.log(this.form.value.country);
-    console.log(this.form.value.roleName);
   }
 
   state_details =
