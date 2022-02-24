@@ -9,6 +9,7 @@ import { HandsonComponent } from './handson/handson.component';
 import { AddprofileComponent } from './addprofile/addprofile.component';
 import { CountryComponent } from './country/country.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 
 const routes: Routes = [
   { path:"",redirectTo:"home",pathMatch:"full" },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'userauth', component: UserauthComponent },
   { path: 'printdata', component: PrintdataComponent },
   { path: 'add', component: AddprofileComponent },
+  { path: 'update', component: UpdateprofileComponent },
   // { path: 'add', component: AddProfilePageComponent },
   { path: 'handson', component: HandsonComponent },
   { path: 'country', component: CountryComponent },

@@ -1,0 +1,344 @@
+html {
+    background-color: #56baed;
+  }
+  
+  body {
+    height: 100vh;
+  }
+  
+  a {
+    color: #92badd;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+  }
+  
+  h2 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    margin: 40px 8px 10px 8px;
+    color: #cccccc;
+  }
+  
+  /* STRUCTURE */
+  .layout-navbar-fixed .wrapper .content-wrapper {
+    margin-top: calc(3.5rem + 1px);
+  }
+  
+  .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+  }
+  
+  #exTab1 .tab-content {
+    color: white;
+    background-color: #428bca;
+    padding: 5px 15px;
+  }
+  
+  #exTab1 .nav-pills > li > a {
+    border-radius: 0;
+  }
+  
+  #exTab {
+    width: 100%;
+  }
+  
+  #exTab .tab {
+    width: 100%;
+    color: white;
+    overflow-x: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    padding-left: 0;
+  }
+  
+  #exTab .tab ul {
+    width: 100%;
+  }
+  
+  #exTab .tab li {
+    width: 25%;
+    padding: 5px 10px;
+    border: 1px solid #428bca;
+    text-align: center;
+    cursor: pointer;
+    overflow-x: hidden;
+  }
+  
+  #exTab .tab li:hover {
+    background-color: #314d81;
+  }
+  
+  #exTab .tab .active {
+    background-color: #1247aa;
+    border: 2px solid #428bca;
+  }
+  
+  #exTab .content {
+    width: 100%;
+  }
+  
+  #exTab .content .hide {
+    display: none;
+  }
+  
+  #exTab .content .row {
+    padding: 20px;
+    background-color: #d7e7f00e;
+    border-radius: 10px;
+  }
+  
+  #exTab .content .row label {
+    color: azure;
+    margin-bottom: 0;
+  }
+  
+  #exTab .content .row input,
+  #exTab .content .row select {
+    background-color: #92929225;
+    border: 1px solid azure;
+    width: 100%;
+  }
+  
+  #formContent {
+    border-radius: 10px 10px 10px 10px;
+    background: rgba(40, 57, 101, 0.9);
+    padding: 30px;
+    width: 90%;
+    max-width: 90rem;
+    position: relative;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  #formFooter {
+    background-color: rgba(88, 95, 110, 0.1);
+    border-top: 1px solid #1f2749;
+    padding: 25px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+  }
+  
+  .imglogo {
+    border-radius: 50%;
+    background: #2a395f;
+    padding: 5px;
+  }
+  
+  /* TABS */
+  h2.inactive {
+    color: #cccccc;
+  }
+  
+  h2.active {
+    color: #0d0d0d;
+    border-bottom: 2px solid #5fbae9;
+  }
+  
+  /* FORM TYPOGRAPHY*/
+  input[type=button],
+  input[type=submit],
+  input[type=reset] {
+    background-color: rgba(143, 155, 179, 0.24);
+    border: none;
+    color: white;
+    padding: 15px 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 20px;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input[type=button]:hover,
+  input[type=submit]:hover,
+  input[type=reset]:hover {
+    background-color: #39ace7;
+  }
+  
+  input[type=button]:active,
+  input[type=submit]:active,
+  input[type=reset]:active {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  
+  input[type=text],
+  input[type=password],
+  input[type=number],
+  select {
+    background-color: #192038;
+    color: #fff;
+    border-color: #101426;
+    text-align: left;
+    padding: 6px 20px;
+    width: 90%;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background-color: #151a30;
+    border-color: #101426;
+  }
+  
+  input[type=text]:placeholder,
+  input[type=password]:placeholder {
+    color: #929292;
+  }
+  
+  /* ANIMATIONS */
+  /* Simple CSS3 Fade-in-down Animation */
+  .fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  @-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 0.5s;
+            animation: fadeIn ease-in 0.5s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+  }
+  
+  .fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s;
+  }
+  
+  .fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+  }
+  
+  .fadeIn.third {
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  
+  .fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  
+  /* Simple CSS3 Fade-in Animation */
+  .underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #56baed;
+    content: "";
+    -webkit-transition: width 0.2s;
+    transition: width 0.2s;
+  }
+  
+  .underlineHover:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .underlineHover:hover:after {
+    width: 100%;
+  }
+  
+  /* OTHERS */
+  *:focus {
+    outline: none;
+  }
+  
+  #icon {
+    width: 60%;
+  }
+  
+  .invalid-feedback {
+    color: red;
+  }
+  /*# sourceMappingURL=addprofile.component.css.map */

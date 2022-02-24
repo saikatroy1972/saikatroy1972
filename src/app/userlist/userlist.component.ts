@@ -20,6 +20,12 @@ export class UserlistComponent implements OnInit {
     });
   }
 
+  update(id: any){
+    localStorage.setItem("userid", id);
+    this.router.navigate(['./update'])
+    //console.log(localStorage.getItem("userid"));
+  }
+
   ngOnInit(): void {
   }
 

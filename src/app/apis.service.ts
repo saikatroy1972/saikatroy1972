@@ -32,7 +32,7 @@ export class ApisService {
 
   public updateProfile(profile: any){
     let headers = environment.header;
-    return this.http.post(this.baseUrl + "/api/Auth/User/Update", profile, {headers});
+    return this.http.post(this.baseUrl + "/api/Auth/Update", profile, {headers});
   }
 
   public addProfile(profile: any){
@@ -44,6 +44,11 @@ export class ApisService {
     let headers = new HttpHeaders().set( 'Content-Type', 'application/json')
     return this.http.get(this.baseUrl + "/api/Country/GetCountryDetails", {headers});
   }
+
+  // public getStateList(){
+  //   let headers = new HttpHeaders().set( 'Content-Type', 'application/json')
+  //   return this.http.get('http://115.124.120.251:5056' + "​/api​/State​/GetAllStateDetails", {headers});
+  // }
 
   public addCountry(country: any){
     let headers = new HttpHeaders().set( 'Content-Type', 'application/json')

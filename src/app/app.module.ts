@@ -19,6 +19,7 @@ import { HandsonComponent } from './handson/handson.component';
 import { HotTableModule } from '@handsontable/angular';
 import { CountryComponent } from './country/country.component';
 import { UserlistComponent } from './userlist/userlist.component';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { UserlistComponent } from './userlist/userlist.component';
     HandsonComponent,
     CountryComponent,
     UserlistComponent,
+    UpdateprofileComponent,
   ],
   imports: [
     BrowserModule,
